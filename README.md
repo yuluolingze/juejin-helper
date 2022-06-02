@@ -6,23 +6,25 @@
 
 <h1 align="center">JuejinHelper-稀土掘金助手</h1>
 
-<p align="center">签到、抽奖、沾喜气、海底掘金游戏、自动化工作流。</p>
+<p align="center">签到、抽奖、沾喜气、消除Bug、海底掘金游戏、自动化工作流。</p>
 
 ## 使用
 
-自动化执行任务: 掘金每日签到, 沾喜气, 免费抽奖, 海底掘金游戏, 最后将结果报告邮件通知订阅人。\
+自动化执行任务: 掘金每日签到, 沾喜气, 免费抽奖, 消除Bug, 海底掘金游戏, 最后将结果报告邮件通知订阅人。\
 自动化运行时间: 北京时间上午06:30
 
 1. [Fork 仓库](https://github.com/iDerekLi/juejin-helper)
 
 2. 仓库 -> Settings -> Secrets -> New repository secret, 添加Secrets变量如下:
 
-    | Name | Value |
-    | --- | --- |
-    | COOKIE | 掘金网站Cookie, 打开浏览器，登录 [掘金](https://juejin.cn/), 打开控制台DevTools -> Network，复制 cookie, **掘金Cookie有效期约1个月需定期更新.** |
-    | EMAIL_USER | 发件人邮箱地址(需要开启 SMTP) |
-    | EMAIL_PASS | 发件人邮箱密码(SMTP密码) |
-    | EMAIL_TO | 订阅人邮箱地址(收件人). 如需多人订阅使用 `, ` 分割, 例如: `a@163.com, b@qq.com` |
+    | Name | Value | 是否必填 |
+    | --- | --- | --- |
+    | COOKIE | 掘金网站Cookie, 如有多个Cookie则用 `,`分隔  | ✅ |
+    | DINGDING_WEBHOOK | 钉钉机器人WEBHOOK | ❌ |
+    | EMAIL_USER | 发件人邮箱地址(需要开启 SMTP) | ❌ |
+    | EMAIL_PASS | 发件人邮箱密码(SMTP密码) | ❌ |
+    | EMAIL_TO | 订阅人邮箱地址(收件人). 如需多人订阅使用 `, ` 分割, 例如: `a@163.com, b@qq.com` | ❌ |
+    | PUSHPLUS_TOKEN | [Pushplus](http://www.pushplus.plus/) 官网申请，支持微信消息推送 | ❌ |
 
 3. 仓库 -> Actions, 检查Workflows并启用。
 
@@ -51,8 +53,13 @@ DevTools截图:
 
 [![海底掘金挑战赛](https://user-images.githubusercontent.com/24502299/151397151-0d69998a-2310-4a32-945f-c8e0035ed65d.png)](https://juejin.cn/game/haidijuejin/)
 
+## 贡献
+
+这个项目的存在要感谢所有做出贡献的人。 请先阅读 [[Contribute](CONTRIBUTING.md)]。  
+您可以将任何想法作为 [拉取请求](https://github.com/iDerekLi/juejin-helper/pulls) 或 [GitHub问题](https://github.com/iDerekLi/juejin-helper/issues) 提交。
+
 ## 赞赏
-### ☕️微信赞赏！鼓励升级！
+### ☕️微信赞赏！
 <img src="https://user-images.githubusercontent.com/24502299/150144723-863ad914-3849-40df-8857-5ec5cd60cacd.JPG" alt="微信赞赏" width="300" />
 
 ## 许可
